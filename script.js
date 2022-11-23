@@ -1,10 +1,12 @@
-const app = document.querySelector("#app")
+const submitBtn = document.querySelector("#submitBtn")
+const loading = document.querySelector("#loading")
 
-setTimeout(() => {
-  app.textContent = "Js triggered!"
-  app.style.background = "red"
-  window.Print.postMessage({
-    "status": 200,
-    "orderId": "a535"
-  })
-}, 5000)
+submitBtn.addEventListener("click", () => {
+	loading.textContent = "טוען..."
+	setTimeout(() => {
+		window.Print.postMessage({
+			status: 200,
+			orderId: "a535",
+		})
+	}, 1000)
+})

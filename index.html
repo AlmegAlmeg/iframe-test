@@ -6,8 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testing Iframe</title>
   <script src="script.js" defer></script>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      direction: rtl;
+    }
+    #submitBtn {
+      font-size: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      padding: .5rem 1rem;
+      cursor: pointer;
+    }
+    #loading{
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <button id="submitBtn">שלמו עכשיו</button>
+    <p id="loading"></p>
+  </div>
 </body>
 </html>
