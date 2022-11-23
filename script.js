@@ -3,5 +3,5 @@ const app = document.querySelector("#app")
 setTimeout(() => {
   app.textContent = "Js triggered!"
   app.style.background = "red"
-  window.postMessage("Hello from window!")
+  window.Print.postMessage("Hello from channel")
 }, 5000)
